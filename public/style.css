@@ -1,0 +1,46 @@
+.kitten-video {
+  position: absolute;
+  background: lavender;
+  border-radius: 100px;
+  overflow: hidden;
+  width: 178px;
+}
+.kitten-video iframe {
+  position: relative;
+  left: -25%;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+.kitten-video a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(-200px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+.bubble-enter-active, .bubble-leave-active {
+  animation: bubble 20s ease-in-out;
+}
+.bubble-enter, .bubble-leave-to {
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
